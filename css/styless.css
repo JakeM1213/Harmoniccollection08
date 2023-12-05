@@ -1,0 +1,155 @@
+/* Apply styles to the image rows and images */
+body {
+    font-family: 'Caveat', sans-serif;
+    background: linear-gradient(to right, rgb(255, 101, 209), rgb(149, 0, 112));
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 2s ease, background-size 2s ease;
+}
+#color-changing-text {
+    font-size: 24px;
+    transition: color 1s ease-in-out;
+}
+#tops-heading {
+    color: rgb(255, 101, 209);
+}
+
+/* Style for h2 element */
+h2 {
+    font-size: 28px;
+    color: #ff65d1; /* Set the initial color */
+    transition: color 1s ease-in-out; /* Add a transition effect for color changes */
+}
+.div-img {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20%;
+}
+
+h1 {
+    position: relative;
+    text-align: center; /* Centering text */
+}
+
+h1::before {
+    content: '\1F380'; /* Unicode character for a ribbon */
+    font-size: 1.5em;
+    position: absolute;
+    top: -10px;
+    left: 100%; /* Adjusted the position to the right of the text */
+    transform: translateX(-100%);
+    color: rgb(255, 101, 209);
+}
+
+h2, h3 {
+    text-align: center; /* Centering text */
+}
+
+img {
+    transition: transform .2s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgb(210, 143, 255);
+    border-radius: 10px;
+    border: 5px solid rgb(232, 110, 234);
+    animation: bounceIn 1s, glowBorder 2s infinite alternate; /* Added the bounce-in and glow animations */
+}
+@keyframes glowBorder {
+    0% {
+        box-shadow: 0 0 10px #ff00ff; /* Electric Pink glow effect */
+    }
+    100% {
+        box-shadow: 0 0 20px #ff00ff; /* Increase the glow effect */
+    }
+}
+
+.img {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+img:hover {
+    transform: scale(4.5);
+}
+
+.image-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-row img {
+    max-width: 1000px; /* Adjust the size as needed */
+    height: auto;
+    margin: 5px; /* Add spacing between images */
+    z-index: 1; /* Ensure images appear above the lines */
+}
+
+/* Apply styles to the image rows and images */
+.image-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image-row img {
+    max-width: 1000px; /* Adjust the size as needed */
+    height: auto;
+    margin: 5px; /* Add spacing between images */
+    z-index: 1; /* Ensure images appear above the lines */
+}
+
+/* Add divider lines */
+  
+
+
+
+/* Animation properties */
+@keyframes moveBorder {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.1);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add this CSS for styling the bow */
+.button-link a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit the color from the parent */
+    margin-left: 5px; /* Adjust the spacing between "Coquette" and the bow */
+}
+
+.button-link a:hover {
+    color: #ff65d1; /* Change the color on hover if needed */
+}
